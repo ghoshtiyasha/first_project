@@ -1,16 +1,18 @@
 def calculator():
-    sum=0
+    sum=0.0
     print("enter")
     while(True):
         num=str(input())
         if(num=="stop"):
             break
+        elif (num[0] == '*'):
+             sum = sum * float(num[1:])
+        elif(num[0]=='/'):
+            sum=sum / float(num[1:])
         else:
-            #print("Enter the number")
-            #num=int(input())
-            sum= sum + int(num)
-            print("sum is the following")
-            print(sum)
+              sum= sum + float(num)
+        print("sum is the following")
+        print(sum)
     return sum
 
 #driver code
